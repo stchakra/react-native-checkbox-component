@@ -16,7 +16,8 @@ import {
 	TouchableOpacity
 } from 'react-native';
 import PropTypes from 'prop-types';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+// import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialCommunityIcons from 'react-native-vector-icons/FontAwesome';
 
 export default class CheckBox extends Component {
 	constructor(props) {
@@ -102,7 +103,8 @@ export default class CheckBox extends Component {
 
 	genCheckedIcon() {
 		var source;
-		source = this.state.isChecked ? 'checkbox-marked' : 'checkbox-blank-outline';
+		// source = this.state.isChecked ? 'checkbox-marked' : 'checkbox-blank-outline';
+		source = this.state.isChecked ? 'check' : 'square-o';
 		return (
 			<MaterialCommunityIcons name={source} size={20} color={this._getTintColor()} />
 		);
